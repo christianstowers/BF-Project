@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>BF Feed</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let card of posts | async"> <!-- the pipe and async tells firebase that the data in post is asynchronous -->
+    <ion-card-content>
+      <ion-card-title>
+        {{card.title}}
+      </ion-card-title>
+      <p>
+        {{card.body}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

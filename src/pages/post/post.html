@@ -1,0 +1,33 @@
+<!--
+  Generated template for the Post page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Post</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<!--
+ngModel: tells view to attach particular data to a class. Square braces [] escape from the class to the view, parentheses () escape from the view to the class. Two-way data binding. Boom.
+-->
+<ion-content padding>
+	<ion-list>
+		<ion-item>
+			<ion-label floating>Title</ion-label>
+			<ion-input type="text" [(ngModel)]="post.title"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>Body</ion-label>
+			<ion-input type="text" [(ngModel)]="post.body"></ion-input>
+		</ion-item>
+<!--
+One-way binding for button: wrap click event in parentheses. Tells Angular whn event hapens send info back to class to call the submit method. 
+-->
+		<button ion-button full (click)="submit()">Submit</button>
+	</ion-list>
+</ion-content>
